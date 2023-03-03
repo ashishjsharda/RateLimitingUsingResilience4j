@@ -12,8 +12,8 @@ public class RateLimiterConfiguration {
     @Bean
     public RateLimiterConfig rateLimiterConfig() {
         return RateLimiterConfig.custom()
-                .limitRefreshPeriod(Duration.ofSeconds(1))
-                .limitForPeriod(1)
+                .limitRefreshPeriod(Duration.ofSeconds(10))
+                .limitForPeriod(5)
                 .timeoutDuration(Duration.ofSeconds(1))
                 .build();
     }
